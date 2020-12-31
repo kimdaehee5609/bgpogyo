@@ -1,0 +1,651 @@
+%	-------------------------------------------------------------------------------
+%
+%			작성		
+%				2020년 
+%				7 월 
+%				28 일
+%				화
+%				작성
+%
+%
+%
+%
+%
+%	-------------------------------------------------------------------------------
+
+%	\documentclass[10pt,xcolor=pdftex,dvipsnames,table]{beamer}
+%	\documentclass[10pt,blue,xcolor=pdftex,dvipsnames,table,handout]{beamer}
+%	\documentclass[14pt,blue,xcolor=pdftex,dvipsnames,table,handout]{beamer}
+	\documentclass[aspectratio=1610,14pt,xcolor=pdftex,dvipsnames,table,handout]{beamer}
+%	\documentclass[aspectratio=169,17pt,xcolor=pdftex,dvipsnames,table,handout]{beamer}
+%	\documentclass[aspectratio=149,17pt,xcolor=pdftex,dvipsnames,table,handout]{beamer}
+%	\documentclass[aspectratio=54,17pt,xcolor=pdftex,dvipsnames,table,handout]{beamer}
+%	\documentclass[aspectratio=43,17pt,xcolor=pdftex,dvipsnames,table,handout]{beamer}
+%	\documentclass[aspectratio=32,17pt,xcolor=pdftex,dvipsnames,table,handout]{beamer}
+
+		% Font Size
+		%	default font size : 11 pt
+		%	8,9,10,11,12,14,17,20
+		%
+		% 	put frame titles 
+		% 		1) 	slideatop
+		%		2) 	slide centered
+		%
+		%	navigation bar
+		% 		1)	compress
+		%		2)	uncompressed
+		%
+		%	Color
+		%		1) blue
+		%		2) red
+		%		3) brown
+		%		4) black and white	
+		%
+		%	Output
+		%		1)  	[default]	
+		%		2)	[handout]		for PDF handouts
+		%		3) 	[trans]		for PDF transparency
+		%		4)	[notes=hide/show/only]
+
+		%	Text and Math Font
+		% 		1)	[sans]
+		% 		2)	[sefif]
+		%		3) 	[mathsans]
+		%		4)	[mathserif]
+
+
+		%	---------------------------------------------------------	
+		%	슬라이드 크기 설정 ( 128mm X 96mm )
+		%	---------------------------------------------------------	
+%			\setbeamersize{text margin left=2mm}
+%			\setbeamersize{text margin right=2mm}
+
+	%	========================================================== 	Package
+		\usepackage{kotex}						% 한글 사용
+		\usepackage{amssymb,amsfonts,amsmath}	% 수학 수식 사용
+		\usepackage{color}					%
+		\usepackage{colortbl}					%
+
+
+	%		========================================================= 	note 옵션인 
+	%			\setbeameroption{show only notes}
+		
+
+	%		========================================================= 	Theme
+
+		%	---------------------------------------------------------	
+		%	전체 테마
+		%	---------------------------------------------------------	
+		%	테마 명명의 관례 : 도시 이름
+%			\usetheme{default}			%
+%			\usetheme{Madrid}    		%
+%			\usetheme{CambridgeUS}    	% -red, no navigation bar
+%			\usetheme{Antibes}			% -blueish, tree-like navigation bar
+
+		%	----------------- table of contents in sidebar
+			\usetheme{Berkeley}		% -blueish, table of contents in sidebar
+									% 개인적으로 마음에 듬
+
+%			\usetheme{Marburg}			% - sidebar on the right
+%			\usetheme{Hannover}		% 왼쪽에 마크
+%			\usetheme{Berlin}			% - navigation bar in the headline
+%			\usetheme{Szeged}			% - navigation bar in the headline, horizontal lines
+%			\usetheme{Malmoe}			% - section/subsection in the headline
+
+%			\usetheme{Singapore}
+%			\usetheme{Amsterdam}
+
+		%	---------------------------------------------------------	
+		%	색 테마
+		%	---------------------------------------------------------	
+%			\usecolortheme{albatross}	% 바탕 파란
+%			\usecolortheme{crane}		% 바탕 흰색
+%			\usecolortheme{beetle}		% 바탕 회색
+%			\usecolortheme{dove}		% 전체적으로 흰색
+%			\usecolortheme{fly}		% 전체적으로 회색
+%			\usecolortheme{seagull}	% 휜색
+%			\usecolortheme{wolverine}	& 제목이 노란색
+%			\usecolortheme{beaver}
+
+		%	---------------------------------------------------------	
+		%	Inner Color Theme 			내부 색 테마 ( 블록의 색 )
+		%	---------------------------------------------------------	
+
+%			\usecolortheme{rose}		% 흰색
+%			\usecolortheme{lily}		% 색 안 칠한다
+%			\usecolortheme{orchid} 	% 진하게
+
+		%	---------------------------------------------------------	
+		%	Outter Color Theme 		외부 색 테마 ( 머리말, 고리말, 사이드바 )
+		%	---------------------------------------------------------	
+
+%			\usecolortheme{whale}		% 진하다
+%			\usecolortheme{dolphin}	% 중간
+%			\usecolortheme{seahorse}	% 연하다
+
+		%	---------------------------------------------------------	
+		%	Font Theme 				폰트 테마
+		%	---------------------------------------------------------	
+%			\usfonttheme{default}		
+			\usefonttheme{serif}			
+%			\usefonttheme{structurebold}			
+%			\usefonttheme{structureitalicserif}			
+%			\usefonttheme{structuresmallcapsserif}			
+
+
+
+		%	---------------------------------------------------------	
+		%	Inner Theme 				
+		%	---------------------------------------------------------	
+
+%			\useinnertheme{default}
+			\useinnertheme{circles}		% 원문자			
+%			\useinnertheme{rectangles}		% 사각문자			
+%			\useinnertheme{rounded}			% 깨어짐
+%			\useinnertheme{inmargin}			
+
+
+
+
+		%	---------------------------------------------------------	
+		%	이동 단추 삭제
+		%	---------------------------------------------------------	
+%			\setbeamertemplate{navigation symbols}{}
+
+		%	---------------------------------------------------------	
+		%	문서 정보 표시 꼬리말 적용
+		%	---------------------------------------------------------	
+%			\useoutertheme{infolines}
+
+
+			
+	%	---------------------------------------------------------- 	배경이미지 지정
+%			\pgfdeclareimage[width=\paperwidth,height=\paperheight]{bgimage}{./fig/Chrysanthemum.jpg}
+%			\setbeamertemplate{background canvas}{\pgfuseimage{bgimage}}
+
+		%	---------------------------------------------------------	
+		% 	본문 글꼴색 지정
+		%	---------------------------------------------------------	
+%			\setbeamercolor{normal text}{fg=purple}
+%			\setbeamercolor{normal text}{fg=red!80}	% 숫자는 투명도 표시
+
+
+		%	---------------------------------------------------------	
+		%	itemize 모양 설정
+		%	---------------------------------------------------------	
+%			\setbeamertemplate{items}[ball]
+%			\setbeamertemplate{items}[circle]
+%			\setbeamertemplate{items}[rectangle]
+
+
+
+
+
+
+		\setbeamercovered{dynamic}
+
+
+
+
+
+		% --------------------------------- 	문서 기본 사항 설정
+		\setcounter{secnumdepth}{3} 		% 문단 번호 깊이
+		\setcounter{tocdepth}{3} 			% 문단 번호 깊이
+
+
+
+
+% ------------------------------------------------------------------------------
+% Begin document (Content goes below)
+% ------------------------------------------------------------------------------
+	\begin{document}
+	
+
+			\title{ 포교사  }
+			\author{ 김대희 }
+			\date{ 2020년 
+					8월 
+					14일 
+					금요일   }
+
+
+% -----------------------------------------------------------------------------
+%		개정 내용
+% -----------------------------------------------------------------------------
+%
+%		2020년 7월 28일 첫제작
+%
+%
+%
+
+
+	%	==========================================================
+	%
+	%	----------------------------------------------------------
+		\begin{frame}[plain]
+		\titlepage
+		\end{frame}
+
+
+		\begin{frame} [plain]{목차}
+		\tableofcontents%
+
+			\begin{itemize}
+				\item 포교사 고시
+				\item 포교사 25기
+				\item 부산 포교사단
+				\item 연락처
+				\item 행사
+				\item 일요법회
+			\end{itemize}
+
+		\end{frame}
+
+
+
+	%	========================================================== 포교사고시
+		\part{ 포교사 고시 }
+		\frame{\partpage}
+
+		\begin{frame} [plain]{목차}
+		\tableofcontents%
+		\end{frame}
+		
+
+	%	---------------------------------------------------------- 시험
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 필기 시험 }
+		\begin{frame} [t,plain]
+		\frametitle{}
+			\begin{block} { 필기 시험}
+			\setlength{\leftmargini}{5em}			
+			\begin{itemize}
+				\item [수험번호]628 - 2020 - A3
+				\item [시험] 2020년 7월 11일
+				\item [합격] 2020년 07월 24일 562명
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+		
+
+	%	---------------------------------------------------------- 포교원연수
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 포교원 연수 }
+		\begin{frame} [t,plain]
+		\frametitle{}
+			\begin{block} { 포교원 연수 }
+			\setlength{\leftmargini}{5em}			
+			\begin{itemize}
+				\item [교육 기관] 대한불교조계종 디지털 불교대학
+				\item [교육 기간]8월~9월(약 2개월, 세부적인 내용은 별도 공지)
+				\item [교육 내용] 총론, 신행혁신, 조계종의 이해, 군경찰·교정교화 등 분야별 포교 등 9개 강좌
+				\item [교육 공지] 대한불교조계종 디지털 불교대학
+			\end{itemize}
+			\end{block}			
+
+								
+		\end{frame}						
+	
+
+	%	---------------------------------------------------------- 포교사단연수
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 포교사단연수 }
+		\begin{frame} [t,plain]
+		\frametitle{ }
+			\begin{block} { 포교사단연수 }
+			\setlength{\leftmargini}{5em}			
+			\begin{itemize}
+				\item [교육 기관] 대한불교조계종 포교사단(지역단)
+				\item [교육 기간]8월~9월(약 2개월, 세부적인 내용은 별도 공지)
+				\item [교육 내용] 집체교육, 수행, 팀 활동, 봉사활동 등
+				\item [교육 공지] 대한불교조계종 포교사단(지역단)
+
+				\item [일시]	2020년 8월 8일 (토) 14시
+				\item [장소]	부산지역단 회의실
+				\item [비용]	5만원
+		부산은행
+		206-13-000414-1
+		포교사단 부산지역단
+
+			\end{itemize}
+			\end{block}						
+								
+		\end{frame}						
+
+
+	%	---------------------------------------------------------- 법화경 독송
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 법화경 독송 }
+		\begin{frame} [t,plain]
+		\frametitle{ }
+			\begin{block} { 법화경 독송 }
+			\setlength{\leftmargini}{2em}			
+			\begin{itemize}
+				\item 화 8/11 동산팀 7
+				\item 수 8/12 범포팀 6
+				\item 목 8/13 원효팀 오전 10시 30분 
+				\item 금 8/14 문화팀 6
+				\item 토 8/15 경찰팀 오전 10시 
+				\item 일 8/16 룸비니 오전 9시 30분
+				\item 월 8/17 동의팀 6시 30분
+				\item 화 8/18 마하연 6시 30분
+				\item 수 8/19 보현팀 6시 
+				\item 목 8/20 지국천 6
+				\item 금 8/21 길잡이 7
+				\item 금 8/22 자비팀 오전 10시
+			\end{itemize}
+			\end{block}						
+								
+		\end{frame}						
+
+
+
+
+	%	========================================================== 25기
+		\part{ 포교사 25기 }
+		\frame{\partpage}
+
+		\begin{frame} [plain]{목차}
+		\tableofcontents%
+		\end{frame}
+
+
+	%	---------------------------------------------------------- 포교사단체복
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 포교사 단체복 }
+		\begin{frame} [t,plain]
+		\frametitle{ }
+			\begin{block} { 포교사 단체복 }
+			\setlength{\leftmargini}{5em}			
+			\begin{itemize}
+				\item [전번] 051) 633-3011
+				\item [사이즈] 110
+			\end{itemize}
+			\end{block}						
+								
+		\end{frame}						
+
+
+	%	========================================================== 부산포교사단
+		\part{ 부산 포교사단 }
+		\frame{\partpage}
+
+		\begin{frame} [plain]{목차}
+		\tableofcontents%
+		\end{frame}
+
+
+
+	%	---------------------------------------------------------- 부산포교사단
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 부산 표교사단 : 연락처  }
+		\begin{frame} [t,plain]
+		\frametitle{ }
+			\begin{block} { 부산 포교사단 : 연락처  }
+			\setlength{\leftmargini}{3em}			
+			\begin{itemize}
+			\item 051) 633-3011
+			\item 051) 633-3012 팩스
+			\item pogy3011@hanmail.net
+			\end{itemize}
+			\end{block}						
+								
+		\end{frame}						
+
+
+%http://www.buddhism.or.kr/index_pogyo.php
+%http://www.pogyosadan.org/main
+
+	%	---------------------------------------------------------- 부산포교사단
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 부산표교사단 : 주소 }
+		\begin{frame} [t,plain]
+		\frametitle{ }
+			\begin{block} { 부산 포교사단 : 주소 }
+			\setlength{\leftmargini}{3em}			
+			\begin{itemize}
+			\item 우) 47257
+			\item 부산광역시 부산진구 서면문화로 27 유원골든타워 오피스텔 501호 (부전동 474-80)
+			\item 포교사단 부산지역단
+			\end{itemize}
+			\end{block}						
+								
+		\end{frame}						
+
+
+	%	---------------------------------------------------------- 단비
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 부산표교사단 : 단비 }
+		\begin{frame} [t,plain]
+		\frametitle{ }
+			\begin{block} { 부산 포교사단 : 단비 }
+			\setlength{\leftmargini}{3em}			
+			\begin{itemize}
+			\item 단비입금계좌 
+			\item 은행 : 부산은행
+			\item 계좌 : 206-13-000 413 - 3
+			\item 예금주 : 포교사단 부산지역단 정분남
+			\item 금액 : 
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+
+
+	%	---------------------------------------------------------- 온라인카페
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 부산표교사단 : 온라인 카페 }
+		\begin{frame} [t,plain]
+		\frametitle{ }
+			\begin{block} { 부산 포교사단 : 온라인 카페 }
+			\setlength{\leftmargini}{3em}			
+			\begin{itemize}
+			\item \url{http://cafe.daum.net/bgpogyosadan}
+			\item 부산은행
+			\item 206-13-000 413 - 3
+			\item 예금주 : 포교사단 부산지역단 정분남
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+
+
+
+	%	========================================================== 연락처
+		\part{ 연락처 }
+		\frame{\partpage}
+
+		\begin{frame} [plain]{목차}
+		\tableofcontents%
+		\end{frame}
+
+
+	%	---------------------------------------------------------- 연락처
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 연락처 : 포교원 }
+		\begin{frame} [t,plain]
+		\frametitle{ }
+			\begin{block} { 연락처 : 포교원  }
+			\setlength{\leftmargini}{3em}			
+			\begin{itemize}
+			\item 포교원 포교팀 02-2011-1893(담당자 : 이권수)
+			\item 디지털 불교대학 070-8680-9288
+			\item 포교사단 본단 02-927-0588
+			\end{itemize}
+			\end{block}						
+								
+		\end{frame}						
+
+
+	%	---------------------------------------------------------- 연락처
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 연락처 포교사단 }
+		\begin{frame} [t,plain]
+		\frametitle{ }
+			\begin{block} { 연락처 }
+			\setlength{\leftmargini}{3em}			
+			\begin{itemize}
+			\item 서울 02-927-0589
+			\item 충북 043-265-1080
+			\item 부산 051-633-3011
+			\item 인천경기 032-435-1080
+			\item 대구 053-623-0108
+			\item 경남 055-262-1180
+			\item 대전충남 042-383-5052
+			\item 울산 052-275-8484
+			\item 광주전남 062-375-0107
+			\item 제주 064-732-1080
+			\item 전북 063-252-4940
+			\item 경북 053-813-0108
+			\item 강원 070-4145-0588
+			\end{itemize}
+			\end{block}						
+								
+		\end{frame}						
+
+
+		
+
+
+	%	========================================================== 행사
+		\part{행사}
+		\frame{\partpage}
+		
+		\begin{frame} [plain]{목차}
+		\tableofcontents%
+		\end{frame}
+		
+
+	
+
+	
+
+	%	---------------------------------------------------------- 대중공양
+	%		Frame
+	%	----------------------------------------------------------
+		\section{대중공양}
+		\begin{frame} [t,plain]
+		\frametitle{대중공양}
+			\begin{block} {대중공양 }
+			\setlength{\leftmargini}{5em}			
+			\begin{itemize}
+				\item [장소]	 강원도 상원사
+				\item [일시]	7월 16일 (목) 오전 7시 출발
+				\item [금액]	
+			\end{itemize}
+			\end{block}						
+		\end{frame}					
+
+	%	---------------------------------------------------------- 백중기도 
+	%		Frame
+	%	----------------------------------------------------------
+		\section{백중기도 및 영가천도 49재}
+		\begin{frame} [t,plain]
+		\frametitle{백중기도 및 영가천도 49재 }
+			\begin{block} {백중기도 및 영가천도 49재 }
+
+			\setlength{\leftmargini}{5em}			
+			\begin{itemize}
+				\item [입재]	 강원도 상원사
+				\item [회향]	7월 16일 (목) 오전 7시 출발
+				\item [망축기도]	영가1위 1만원
+				\item [생축기도]	가족당 3만원
+			\end{itemize}
+
+			\end{block}						
+		\end{frame}					
+
+
+
+
+
+
+	%	========================================================== 일요법회
+		\part{ 일요 법회 }
+		\frame{\partpage}
+		
+		\begin{frame} [plain]{목차}
+		\tableofcontents%
+		\end{frame}
+		
+
+	
+	%	---------------------------------------------------------- 2020년 08월 02일
+	%		Frame
+	%	----------------------------------------------------------
+		\begin{frame} [c]
+%		\begin{frame} [b]
+%		\begin{frame} [t]
+		\section{2020년 08월 02일}						
+		\frametitle{2020년 08월 02일}						
+
+			\setlength{\leftmargini}{5em}			
+			\begin{itemize}
+				\item [일시]	2020년 08월 02일 10:20
+				\item [징소]	범어사 선문화관
+				\item [법문]	해륜 스님 ( 범어사 포교국장 )
+			\end{itemize}
+							
+		\end{frame}						
+
+
+
+	%	---------------------------------------------------------- 2020년 08월 09일
+	%		Frame
+	%	----------------------------------------------------------
+		\begin{frame} [c]
+%		\begin{frame} [b]
+%		\begin{frame} [t]
+		\section{2020년 08월 09일}						
+		\frametitle{2020년 08월 09일}						
+
+			\setlength{\leftmargini}{5em}			
+			\begin{itemize}
+				\item [일시]	2020년 08월 09일 10:20
+				\item [징소]	범어사 선문화관
+				\item [법문]	해룡 스님 ( 범어사 승가대 교수 )
+			\end{itemize}
+							
+		\end{frame}						
+
+
+
+	%	---------------------------------------------------------- 2020년 08월 16일
+	%		Frame
+	%	----------------------------------------------------------
+		\begin{frame} [c]
+%		\begin{frame} [b]
+%		\begin{frame} [t]
+		\section{2020년 08월 16일}						
+		\frametitle{2020년 08월 16일}						
+
+			\setlength{\leftmargini}{5em}			
+			\begin{itemize}
+				\item [일시]	2020년 08월 09일 10:20
+				\item [징소]	범어사 선문화관
+				\item [법문]	범종 스님 ( 범어사 교무국장 )
+			\end{itemize}
+							
+		\end{frame}						
+
+
+% ------------------------------------------------------------------------------
+% End document
+% ------------------------------------------------------------------------------
+
+
+
+
+
+\end{document}
+
+

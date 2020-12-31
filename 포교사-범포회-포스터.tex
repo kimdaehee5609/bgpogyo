@@ -1,0 +1,400 @@
+%	------------------------------------------------------------------------------
+%
+%		작성 : 2020년 
+%				11월 
+%				23일 
+%				첫 작업
+%
+%
+
+%	\documentclass[25pt, a1paper]{tikzposter}
+%	\documentclass[25pt, a0paper, landscape]{tikzposter}
+%	\documentclass[25pt, a1paper ]{tikzposter}
+	\documentclass[	20pt, 
+							a1paper, 
+							portrait, %
+							margin=0mm, %
+							innermargin=10mm,  		%
+							blockverticalspace=4mm, %
+							colspace=5mm, 
+							subcolspace=0mm
+							]{tikzposter}
+
+
+%	\documentclass[25pt, a1paper]{tikzposter}
+%	\documentclass[25pt, a1paper]{tikzposter}
+%	\documentclass[25pt, a1paper]{tikzposter}
+
+% 	12pt  14pt 17pt  20pt  25pt
+%
+%	a0 a1 a2
+%
+%	landscape  portrait
+%
+
+	%% Tikzposter is highly customizable: please see
+	%% https://bitbucket.org/surmann/tikzposter/downloads/styleguide.pdf
+
+	%	========================================================== 	Package
+		\usepackage{kotex}						% 한글 사용
+
+
+%% Available themes: see also
+%% https://bitbucket.org/surmann/tikzposter/downloads/themes.pdf
+%	\usetheme{Default}
+%	\usetheme{Rays}
+%	\usetheme{Basic}
+	\usetheme{Simple}
+%	\usetheme{Envelope}
+%	\usetheme{Wave}
+%	\usetheme{Board}
+%	\usetheme{Autumn}
+%	\usetheme{Desert}
+
+%% Further changes to the title etc is possible
+%	\usetitlestyle{Default}			%
+%	\usetitlestyle{Basic}				%
+%	\usetitlestyle{Empty}				%
+%	\usetitlestyle{Filled}				%
+%	\usetitlestyle{Envelope}			%
+%	\usetitlestyle{Wave}				%
+%	\usetitlestyle{verticalShading}	%
+
+
+%	\usebackgroundstyle{Default}
+%	\usebackgroundstyle{Rays}
+%	\usebackgroundstyle{VerticalGradation}
+%	\usebackgroundstyle{BottomVerticalGradation}
+%	\usebackgroundstyle{Empty}
+
+%	\useblockstyle{Default}
+%	\useblockstyle{Basic}
+%	\useblockstyle{Minimal}		% 이것은 간단함
+%	\useblockstyle{Envelope}		% 
+%	\useblockstyle{Corner}		% 사각형
+%	\useblockstyle{Slide}			%	띠모양  
+	\useblockstyle{TornOut}		% 손그림모양
+
+
+	\usenotestyle{Default}
+%	\usenotestyle{Corner}
+%	\usenotestyle{VerticalShading}
+%	\usenotestyle{Sticky}
+
+%	\usepackage{fontspec}
+%	\setmainfont{FreeSerif}
+%	\setsansfont{FreeSans}
+
+%	------------------------------------------------------------------------------ 제목
+
+	\title{ 조계종 포교사 범포회 }
+
+	\author{ 	2020년 
+				11월 
+				23일 }
+
+%	\institute{서영엔지니어링}
+%	\titlegraphic{\includegraphics[width=7cm]{IMG_1934}}
+
+	%% Optional title graphic
+	%\titlegraphic{\includegraphics[width=7cm]{IMG_1934}}
+	%% Uncomment to switch off tikzposter footer
+	% \tikzposterlatexaffectionproofoff
+
+\begin{document}
+
+
+	\maketitle[
+					width=841mm,
+					linewidth = 2mm,
+					innersep=4mm,
+					titletotopverticalspace=2mm, %
+					titletoblockverticalspace=2mm, %
+					titletextscale =4, 
+				]
+
+		%		a0  841 - 1189
+		%		a1  594 - 841
+		%		a2  420 - 594
+
+
+
+	\begin{columns}
+
+		\column{0.5}
+
+%	------------------------------------------------------------------------------ block 정의
+
+			\block[
+						titleoffsetx =0mm,	 	%
+						titleoffsety=0mm,	 	% 
+						bodyoffsetx=00mm,	%
+						bodyoffsety=0mm	 	%
+						titlewidthscale=2, 
+						bodywidthscale=1,
+						titleleft, 
+%						titlecenter, 
+%						titleright,
+						bodyverticalshift=-10mm  % 제목과 본과의 간격
+						roundedcorners=50, 
+						linewidth=1mm,
+						titleinnersep=10mm, 
+%						bodyinnersep=0mm
+					]
+			{■  조직 }
+			{
+					\setlength{\leftmargini}{7em}
+					\setlength{\labelsep} {1em}
+%				\begin{LARGE}
+					\begin{itemize}
+					\item [국장]포교국장 해륜 스님
+					\item [회장]경행 최우성 (14) 48 \\
+								염제 강창식 (18) 39
+					\item [총무] 
+					\item [재무] 비로심 유정희 (11)  \\
+								반야심 염미주(16)
+
+				\end{itemize}
+%				\end{LARGE}
+			}
+
+
+%	------------------------------------------------------------------------------
+			\block[
+						bodyverticalshift=-20mm  % 제목과 본과의 간격
+					]
+		{■ 소셜 }
+		{
+			\setlength{\leftmargini}{8em}			
+			\setlength{\labelsep}{1em} % horizontal space from bullet to text (as needed)
+%			\setlength{\partopsep}{0pt}
+%			\setlength{\parskip}{0pt}
+%			\setlength{\parsep}{0pt}
+%			\setlength{\topsep}{0pt}
+%			\setlength{\itemsep}{0pt}
+%			\setlength{\itemindent}{4em} % summary indentation: par 1.25cm + bullet 0.63 + magic number picked empirically (0.25cm)
+%			\setlength{\leftmargin}{0pt}			
+
+			\begin{itemize}
+			\item [밴드] 범어사표교사회 (SINCE2001년)
+			\item [카톡] 
+			\item [홈페이지] 
+			\end{itemize}
+
+		}
+
+
+%	------------------------------------------------------------------------------
+			\block[
+						bodyverticalshift=-20mm  % 제목과 본과의 간격
+					]
+		{■ 중부지역 총괄팀 : 경행 최우성  }
+		{
+			\setlength{\leftmargini}{8em}			
+			\setlength{\labelsep}{1em} % horizontal space from bullet to text (as needed)
+%			\setlength{\partopsep}{0pt}
+%			\setlength{\parskip}{0pt}
+%			\setlength{\parsep}{0pt}
+%			\setlength{\topsep}{0pt}
+%			\setlength{\itemsep}{0pt}
+%			\setlength{\itemindent}{4em} % summary indentation: par 1.25cm + bullet 0.63 + magic number picked empirically (0.25cm)
+%			\setlength{\leftmargin}{0pt}			
+
+			\begin{itemize}
+			\item 금정팀
+			\item 아린이 마야침
+			\item 어린이 연꽃팀
+			\item 금포팀
+			\item 동산팀
+			\item 범포팀
+			\item 원효팀
+
+			\end{itemize}
+		}
+
+
+%	------------------------------------------------------------------------------
+			\block[
+						bodyverticalshift=-20mm  % 제목과 본과의 간격
+					]
+		{■ 연락처 }
+		{
+			\setlength{\leftmargini}{3em}			
+			\setlength{\labelsep}{1em} % horizontal space from bullet to text (as needed)
+			\begin{itemize}
+			\item 포교원 포교팀 02-2011-1893(담당자 : 이권수)
+			\item 디지털 불교대학 070-8680-9288
+			\item 			
+			\item 포교사단 본단 02-927-0588
+			\item 서울 02-927-0589
+			\item 충북 043-265-1080
+			\item 부산 051-633-3011
+			\item 인천경기 032-435-1080
+			\item 대구 053-623-0108
+			\item 경남 055-262-1180
+			\item 대전충남 042-383-5052
+			\item 울산 052-275-8484
+			\item 광주전남 062-375-0107
+			\item 제주 064-732-1080
+			\item 전북 063-252-4940
+			\item 경북 053-813-0108
+			\item 강원 070-4145-0588
+			\end{itemize}
+		}		
+
+
+
+
+	%	====== ====== ====== ====== ====== 
+		\column{0.2}
+
+%	------------------------------------------------------------------------------
+			\block[
+						bodyverticalshift=-20mm  % 제목과 본과의 간격
+					]
+			{■ 일요법회 }
+			{				
+			\setlength{\leftmargini}{3em}			
+			\setlength{\labelsep}{1em} % horizontal space from bullet to text (as needed)
+			\begin{itemize}
+				\item 	8월	2일 동산팀
+				\item 	8월 	9일 금포팀
+				\item  	8월 16일 원효팀
+				\item 	8월 23일 범포팀
+				\item 	8월 30일 금정팀
+			\end{itemize}
+		}
+
+
+	%	---------------------------------------------------------- 8월2일
+	%		Frame
+	%	----------------------------------------------------------
+			\block[
+						bodyverticalshift=-20mm  % 제목과 본과의 간격
+					]
+			{ 8월 2일 동산팀 }
+			{
+			\setlength{\leftmargini}{3em}			
+			\begin{itemize}
+				\item [일자]		8월2 일 
+				\item [팀명]		동산팀 
+				\item [팀장]		공운회장
+				\item 강미정
+				\item 정일현
+				\item 정재황
+				\item 박경희
+				\item 정은경
+				\item 서소환
+			\end{itemize}
+			}
+
+	%	====== ====== ====== ====== ====== 
+		\column{0.3}
+
+	%	---------------------------------------------------------- 8월9일
+	%		Frame
+	%	----------------------------------------------------------
+			\block[
+						bodyverticalshift=-20mm  % 제목과 본과의 간격
+					]
+			{ 8월 9일 금포팀 }
+			{
+			\setlength{\leftmargini}{3em}			
+			\begin{itemize}
+				\item [일자]		8월 9일 
+				\item [팀명]		금포팀 
+				\item [팀장]		
+				\item 여종한
+				\item 김정만
+				\item 김원경
+				\item 김정환
+			\end{itemize}
+		}
+
+
+
+	%	---------------------------------------------------------- 8월16일
+	%		Frame
+	%	----------------------------------------------------------
+			\block[
+						bodyverticalshift=-20mm  % 제목과 본과의 간격
+					]
+			{■  8월 16일 원효팀 }
+			{
+			\setlength{\leftmargini}{3em}			
+			\begin{itemize}
+				\item [일자]		8월 16일 
+				\item [팀명]		원효팀
+				\item [팀장]		
+				\item 오종현
+				\item 전대성
+				\item 김대희
+			\end{itemize}
+			}
+
+
+	%	---------------------------------------------------------- 8월23일
+	%		Frame
+	%	----------------------------------------------------------
+			\block[
+						bodyverticalshift=-20mm  % 제목과 본과의 간격
+					]
+			{■  8월 23일 범포팀 }
+			{
+			\setlength{\leftmargini}{3em}			
+			\begin{itemize}
+				\item [일자]		8월 23일 
+				\item [팀명]		범포팀 
+				\item [팀장]		교육부장
+				\item 김한섭
+				\item 송익순
+				\item 조순점
+				\item 임명선
+				\item 이득자
+				\item 조현주
+			\end{itemize}
+		}
+
+	%	---------------------------------------------------------- 8월30일
+	%		Frame
+	%	----------------------------------------------------------
+			\block[
+						bodyverticalshift=-20mm  % 제목과 본과의 간격
+					]
+			{■  8월 30일 금정팀 }
+			{
+			\setlength{\leftmargini}{3em}			
+			\begin{itemize}
+				\item [일자]		8월 30일 
+				\item [팀명]		금정팀 
+				\item [팀장]		문화해설팀
+				\item 김둘선
+				\item 방순학
+				\item 이황연
+				\item 장명
+				\item 정목등
+				\item 유치정
+			\end{itemize}
+		}
+
+
+	\end{columns}
+
+
+
+
+\end{document}
+
+
+		\begin{huge}
+		\end{huge}
+
+		\begin{LARGE}
+		\end{LARGE}
+
+		\begin{Large}
+		\end{Large}
+
+		\begin{large}
+		\end{large}
+

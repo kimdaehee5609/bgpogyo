@@ -1,0 +1,1090 @@
+%	-------------------------------------------------------------------------------
+%
+%		작성		2020년 
+%				11월 
+%				26일 
+%				목요일
+%
+%
+%
+%
+%
+%
+%	-------------------------------------------------------------------------------
+
+%\documentclass[10pt,xcolor=pdftex,dvipsnames,table]{beamer}
+%\documentclass[10pt,blue,xcolor=pdftex,dvipsnames,table,handout]{beamer}
+%\documentclass[14pt,blue,xcolor=pdftex,dvipsnames,table,handout]{beamer}
+\documentclass[aspectratio=1610,17pt,xcolor=pdftex,dvipsnames,table,handout]{beamer}
+
+			\geometry{paper=a5paper}
+
+		% Font Size
+		%	default font size : 11 pt
+		%	8,9,10,11,12,14,17,20
+		%
+		% 	put frame titles 
+		% 		1) 	slideatop
+		%		2) 	slide centered
+		%
+		%	navigation bar
+		% 		1)	compress
+		%		2)	uncompressed
+		%
+		%	Color
+		%		1) blue
+		%		2) red
+		%		3) brown
+		%		4) black and white	
+		%
+		%	Output
+		%		1)  	[default]	
+		%		2)	[handout]		for PDF handouts
+		%		3) 	[trans]		for PDF transparency
+		%		4)	[notes=hide/show/only]
+
+		%	Text and Math Font
+		% 		1)	[sans]
+		% 		2)	[sefif]
+		%		3) 	[mathsans]
+		%		4)	[mathserif]
+
+
+		%	---------------------------------------------------------	
+		%	슬라이드 크기 설정 ( 128mm X 96mm )
+		%	---------------------------------------------------------	
+%			\setbeamersize{text margin left=2mm}
+%			\setbeamersize{text margin right=2mm}
+
+	%	========================================================== 	Package
+		\usepackage{kotex}						% 한글 사용
+		\usepackage{amssymb,amsfonts,amsmath}	% 수학 수식 사용
+		\usepackage{color}					%
+		\usepackage{colortbl}					%
+
+
+	%		========================================================= 	note 옵션인 
+	%			\setbeameroption{show only notes}
+		
+
+	%		========================================================= 	Theme
+
+		%	---------------------------------------------------------	
+		%	전체 테마
+		%	---------------------------------------------------------	
+		%	테마 명명의 관례 : 도시 이름
+%			\usetheme{default}			%
+%			\usetheme{Madrid}    		%
+%			\usetheme{CambridgeUS}    	% -red, no navigation bar
+%			\usetheme{Antibes}			% -blueish, tree-like navigation bar
+
+		%	----------------- table of contents in sidebar
+			\usetheme{Berkeley}		% -blueish, table of contents in sidebar
+									% 개인적으로 마음에 듬
+
+%			\usetheme{Marburg}			% - sidebar on the right
+%			\usetheme{Hannover}		% 왼쪽에 마크
+%			\usetheme{Berlin}			% - navigation bar in the headline
+%			\usetheme{Szeged}			% - navigation bar in the headline, horizontal lines
+%			\usetheme{Malmoe}			% - section/subsection in the headline
+
+%			\usetheme{Singapore}
+%			\usetheme{Amsterdam}
+
+		%	---------------------------------------------------------	
+		%	색 테마
+		%	---------------------------------------------------------	
+%			\usecolortheme{albatross}	% 바탕 파란
+%			\usecolortheme{crane}		% 바탕 흰색
+%			\usecolortheme{beetle}		% 바탕 회색
+%			\usecolortheme{dove}		% 전체적으로 흰색
+%			\usecolortheme{fly}		% 전체적으로 회색
+%			\usecolortheme{seagull}	% 휜색
+%			\usecolortheme{wolverine}	& 제목이 노란색
+%			\usecolortheme{beaver}
+
+		%	---------------------------------------------------------	
+		%	Inner Color Theme 			내부 색 테마 ( 블록의 색 )
+		%	---------------------------------------------------------	
+
+%			\usecolortheme{rose}		% 흰색
+%			\usecolortheme{lily}		% 색 안 칠한다
+%			\usecolortheme{orchid} 	% 진하게
+
+		%	---------------------------------------------------------	
+		%	Outter Color Theme 		외부 색 테마 ( 머리말, 고리말, 사이드바 )
+		%	---------------------------------------------------------	
+
+%			\usecolortheme{whale}		% 진하다
+%			\usecolortheme{dolphin}	% 중간
+%			\usecolortheme{seahorse}	% 연하다
+
+		%	---------------------------------------------------------	
+		%	Font Theme 				폰트 테마
+		%	---------------------------------------------------------	
+%			\usfonttheme{default}		
+			\usefonttheme{serif}			
+%			\usefonttheme{structurebold}			
+%			\usefonttheme{structureitalicserif}			
+%			\usefonttheme{structuresmallcapsserif}			
+
+
+
+		%	---------------------------------------------------------	
+		%	Inner Theme 				
+		%	---------------------------------------------------------	
+
+%			\useinnertheme{default}
+			\useinnertheme{circles}		% 원문자			
+%			\useinnertheme{rectangles}		% 사각문자			
+%			\useinnertheme{rounded}			% 깨어짐
+%			\useinnertheme{inmargin}			
+
+
+
+
+		%	---------------------------------------------------------	
+		%	이동 단추 삭제
+		%	---------------------------------------------------------	
+%			\setbeamertemplate{navigation symbols}{}
+
+		%	---------------------------------------------------------	
+		%	문서 정보 표시 꼬리말 적용
+		%	---------------------------------------------------------	
+%			\useoutertheme{infolines}
+
+
+			
+	%	---------------------------------------------------------- 	배경이미지 지정
+%			\pgfdeclareimage[width=\paperwidth,height=\paperheight]{bgimage}{./fig/Chrysanthemum.jpg}
+%			\setbeamertemplate{background canvas}{\pgfuseimage{bgimage}}
+
+		%	---------------------------------------------------------	
+		% 	본문 글꼴색 지정
+		%	---------------------------------------------------------	
+%			\setbeamercolor{normal text}{fg=purple}
+%			\setbeamercolor{normal text}{fg=red!80}	% 숫자는 투명도 표시
+
+
+		%	---------------------------------------------------------	
+		%	itemize 모양 설정
+		%	---------------------------------------------------------	
+%			\setbeamertemplate{items}[ball]
+%			\setbeamertemplate{items}[circle]
+%			\setbeamertemplate{items}[rectangle]
+
+
+
+
+
+
+		\setbeamercovered{dynamic}
+
+
+
+
+
+		% --------------------------------- 	문서 기본 사항 설정
+		\setcounter{secnumdepth}{3} 		% 문단 번호 깊이
+		\setcounter{tocdepth}{3} 			% 문단 번호 깊이
+
+
+
+
+% ------------------------------------------------------------------------------
+% Begin document (Content goes below)
+% ------------------------------------------------------------------------------
+	\begin{document}
+	
+
+			\title{ 포교사 청파팀}
+			\author{ 김대희 }
+			\date{ 2020년 11월 26일 목요일 }
+
+
+% -----------------------------------------------------------------------------
+%		개정 내용
+% -----------------------------------------------------------------------------
+%
+%		2020년 6월 28일 첫제작
+%		2020.10.23 부산 국수집 추가
+%		2020.10.26 면과장 part 추가
+%
+
+
+	%	==========================================================
+	%
+	%	----------------------------------------------------------
+		\begin{frame}[plain]
+		\titlepage
+		\end{frame}
+
+
+		\begin{frame} [plain]{목차}
+		\tableofcontents%
+
+
+			\setlength{\leftmargini}{ 2em}			
+			\begin{itemize}
+
+				\item [part1] \ref{part1}	청파팀
+%\label{part1} 	%  부산국수집
+				\item [part2] \ref{part2}	담당 대대
+%\label{part2} 	%  면과장
+				\item [part3] \ref{part3}	청파팀 행사
+%\label{part3} 	%  부산
+%				\item [part4] \ref{part4}	울산
+%\label{part4} 	%  울산
+%				\item [part5] \ref{part5}	가보고 싶은 곳
+%\label{part5} 	%  가보고 싶은 곳
+%				\item [part6] \ref{part6}	일반사이트		
+%				\item [part7] \ref{part7}	쇼핑 사이트		
+
+			\end{itemize}
+
+
+
+		\end{frame}
+
+
+
+	%	========================================================== 청파팀
+		\part{ 청파팀}
+		\frame{\partpage}
+
+
+		\begin{frame} [plain]{목차}
+		\tableofcontents%
+
+\label{part1} 	%  부산 국수집
+
+		\end{frame}
+		
+
+	%	---------------------------------------------------------- 정수 이정호
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 정수 이정호 }
+		\begin{frame} [t,plain]
+		\frametitle{ 정수 이정호 }
+			\begin{block} { 정수 이정호 12 }
+			\setlength{\leftmargini}{6em}			
+			\begin{itemize}
+				\item [법명]			정수 이정호 12
+				\item [전번]			2880 - 3342
+				\item [제적사찰]
+				\item [차종]			렉스톤 	
+				\item [차량]			31모 5041
+				\item [담당주]		3
+				\item [담당 대대]	2.7	
+				\item [사진]			\includegraphics[scale=1.0,  width=0.2\textwidth]{./fig/h_jh9Ud018svc1ic0ihb0q21d3_pxkr6f.jpg}
+				\item [비고]
+				\item [주소] 
+			\end{itemize}
+
+			\end{block}						
+		\end{frame}						
+
+
+	%	---------------------------------------------------------- 현소 안병열 13
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 현소 안병열  }
+		\begin{frame} [t,plain]
+		\frametitle{ 현소 안병열  }
+			\begin{block} { 현소 안병열 13 }
+			\setlength{\leftmargini}{6em}			
+			\begin{itemize}
+				\item [법명]			현소 안병열 13
+				\item [전번]			4572 - 6931
+				\item [제적사찰]
+				\item [차종]			
+				\item [차량]			
+				\item [담당주]		3
+				\item [담당 대대]	5,6	
+				\item [사진]			\includegraphics[scale=1.0,  width=0.4\textwidth]{./fig/20201126150047.png}
+				\item [비고]
+				\item [주소] 
+			\end{itemize}
+
+			\end{block}						
+		\end{frame}						
+
+	%	---------------------------------------------------------- 불심 강만석 15
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 불심 강만석   }
+		\begin{frame} [t,plain]
+		\frametitle{ 불심 강만석  }
+			\begin{block} { 불심 강만석 15 }
+			\setlength{\leftmargini}{6em}			
+			\begin{itemize}
+				\item [법명]			불심 강만석 15
+				\item [전번]			9342 - 7000
+				\item [제적사찰]
+				\item [차종]			렉서스 
+				\item [차량]			63너 0702
+				\item [담당주]		4
+				\item [담당 대대]	5,6	
+				\item [사진]			\includegraphics[scale=1.0,  width=0.4\textwidth]{./fig/20201126154429.png}
+				\item [비고]
+				\item [주소] 
+			\end{itemize}
+
+			\end{block}						
+		\end{frame}						
+
+
+	%	---------------------------------------------------------- 행원 이종찬 15
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 행원 이종찬    }
+		\begin{frame} [t,plain]
+		\frametitle{ 행원 이종찬 }
+			\begin{block} { 행원 이종찬 15 }
+			\setlength{\leftmargini}{6em}			
+			\begin{itemize}
+				\item [법명]			행원 이종찬 15
+				\item [전번]			3851 - 8648
+				\item [제적사찰]
+				\item [차종]			제네시스
+				\item [차량]			01모 9557
+				\item [담당주]		1
+				\item [담당 대대]	5,6	
+				\item [사진]			%\includegraphics[scale=1.0,  width=0.4\textwidth]{./fig/20201126150047.png}
+				\item [비고]
+				\item [주소] 
+			\end{itemize}
+
+			\end{block}						
+		\end{frame}						
+
+
+	%	---------------------------------------------------------- 정진화 박순남 16
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 정진화 박순남 }
+		\begin{frame} [t,plain]
+		\frametitle{ 정진화 박순남 }
+			\begin{block} { 정진화 박순남 16 }
+			\setlength{\leftmargini}{6em}			
+			\begin{itemize}
+				\item [법명]			정진화 박순남 16
+				\item [전번]			2863 - 4277
+				\item [제적사찰]
+				\item [차종]			소렌토
+				\item [차량]			36다 9582
+				\item [담당주]		2
+				\item [담당 대대]	2,7	
+				\item [사진]			\includegraphics[scale=1.0,  width=0.4\textwidth]{./fig/0_953Ud018svcine4c0wm6x38_fas4xa.jpg}
+				\item [비고]
+				\item [주소] 
+			\end{itemize}
+
+			\end{block}						
+		\end{frame}						
+
+
+	%	---------------------------------------------------------- 수경도 정미숙 16
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 수경도 정미숙  }
+		\begin{frame} [t,plain]
+		\frametitle{ 수경도 정미숙  }
+			\begin{block} { 수경도 정미숙 16 }
+			\setlength{\leftmargini}{6em}			
+			\begin{itemize}
+				\item [법명]			수경도 정미숙 16
+				\item [전번]			8836 - 1529
+				\item [제적사찰]
+				\item [차종]			리노
+				\item [차량]			13오 0172
+				\item [담당주]		3
+				\item [담당 대대]	3
+				\item [사진]			\includegraphics[scale=1.0,  width=0.4\textwidth]{./fig/ebbUd0151drnwe0wpb8ko_3ea1e.jpg}
+				\item [비고]
+				\item [주소] 
+			\end{itemize}
+
+			\end{block}						
+		\end{frame}						
+
+
+	%	---------------------------------------------------------- 보현행 최미경 16 
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 보현행 최미경  }
+		\begin{frame} [t,plain]
+		\frametitle{ 보현행 최미경  }
+			\begin{block} { 보현행 최미경 16  }
+			\setlength{\leftmargini}{6em}			
+			\begin{itemize}
+				\item [법명]			보현행 최미경 16 
+				\item [전번]			5773 - 1973
+				\item [제적사찰]
+				\item [차종]			K5
+				\item [차량]			63우 3620
+				\item [담당주]		1
+				\item [담당 대대]	3
+				\item [사진]			\includegraphics[scale=1.0,  width=0.4\textwidth]{./fig/7_c47Ud018svc1stmqbfm0clb6_4bghqs.jpg}
+				\item [비고]
+				\item [주소] 
+			\end{itemize}
+
+			\end{block}						
+		\end{frame}						
+
+	%	---------------------------------------------------------- 월인	김필근 17
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 월인	김필근 }
+		\begin{frame} [t,plain]
+		\frametitle{ 월인	김필근  }
+			\begin{block} { 월인	김필근 17}
+			\setlength{\leftmargini}{6em}			
+			\begin{itemize}
+				\item [법명]			월인	김필근 17
+				\item [전번]			4065 - 2976
+				\item [제적사찰]
+				\item [차종]			그랜저
+				\item [차량]			372거 7229
+				\item [담당주]		3
+				\item [담당 대대]	2,7
+				\item [사진]			\includegraphics[scale=1.0,  width=0.4\textwidth]{./fig/f_h59Ud018svc1iqf345hutr79_xz0ppw.jpg}
+				\item [비고]			포교사단 신문 발간 제의
+				\item [주소] 
+			\end{itemize}
+
+			\end{block}						
+		\end{frame}						
+
+
+	%	---------------------------------------------------------- 수성행	황남숙 17}
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 수성행	황남숙 17}
+		\begin{frame} [t,plain]
+		\frametitle{수성행	황남숙 17}
+			\begin{block} {수성행	황남숙 17}
+			\setlength{\leftmargini}{6em}			
+			\begin{itemize}
+				\item [법명]			수성행	황남숙 17
+				\item [전번]			2565 - 6963
+				\item [제적사찰]
+				\item [차종]			SM5
+				\item [차량]			10루 5584
+				\item [담당주]		3
+				\item [담당 대대]	2,7
+				\item [사진]			%\includegraphics[scale=1.0,  width=0.4\textwidth]{./fig/f_h59Ud018svc1iqf345hutr79_xz0ppw.jpg}
+				\item [비고]			
+				\item [주소] 
+			\end{itemize}
+
+			\end{block}						
+		\end{frame}					
+	
+	%	---------------------------------------------------------- 연담	강동섭 18	}
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 연담	강동섭 18	}
+		\begin{frame} [t,plain]
+		\frametitle{ 연담	강동섭 18	}
+			\begin{block} {연담	강동섭 18	}
+			\setlength{\leftmargini}{6em}			
+			\begin{itemize}
+				\item [법명]			연담	강동섭 18	
+				\item [전번]			9483 - 3486
+				\item [제적사찰]
+				\item [차종]			투싼
+				\item [차량]			46서 3486
+				\item [담당주]		4
+				\item [담당 대대]	3
+				\item [사진]			%\includegraphics[scale=1.0,  width=0.4\textwidth]{./fig/f_h59Ud018svc1iqf345hutr79_xz0ppw.jpg}
+				\item [비고]			
+				\item [주소] 
+			\end{itemize}
+
+			\end{block}						
+		\end{frame}					
+
+
+	%	---------------------------------------------------------- 도선	고영옥 18	}
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 도선	고영옥 18	}
+		\begin{frame} [t,plain]
+		\frametitle{ 도선	고영옥 18	}
+			\begin{block} {도선	고영옥 18	}
+			\setlength{\leftmargini}{6em}			
+			\begin{itemize}
+				\item [법명]			도선	고영옥 18	
+				\item [전번]			3884 - 8040
+				\item [제적사찰]
+				\item [차종]			 리노
+				\item [차량]			13오 0172
+				\item [담당주]		2
+				\item [담당 대대]	2,7
+				\item [사진]			\includegraphics[scale=1.0,  width=0.4\textwidth]{./fig/20201126145548.png}
+				\item [비고]			2020년 11월 8일 일요일 오페라프리마웨딩홀에서 딸 고민정 결혼
+				\item [주소] 
+			\end{itemize}
+
+			\end{block}						
+		\end{frame}					
+
+
+	%	---------------------------------------------------------- 고덕	김동영 18	}
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 고덕	김동영 18	}
+		\begin{frame} [t,plain]
+		\frametitle{ 고덕	김동영 18	}
+			\begin{block} {고덕	김동영 18	}
+			\setlength{\leftmargini}{6em}			
+			\begin{itemize}
+				\item [법명]			고덕	김동영 18	
+				\item [전번]			3589 - 0550
+				\item [제적사찰]
+				\item [차종]			
+				\item [차량]			
+				\item [담당주]		3
+				\item [담당 대대]	3
+				\item [사진]			\includegraphics[scale=1.0,  width=0.4\textwidth]{./fig/7_h2iUd018svc1mowdqgny5rad_avkm4f.jpg}
+				\item [비고]			
+				\item [주소] 
+			\end{itemize}
+
+			\end{block}						
+		\end{frame}					
+
+	%	---------------------------------------------------------- 본각	김영신	팀장 18 }
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 본각	김영신 18 }
+		\begin{frame} [t,plain]
+		\frametitle{ 본각	김영신 18 }
+			\begin{block} {본각	김영신	팀장 18 }
+			\setlength{\leftmargini}{6em}			
+			\begin{itemize}
+				\item [법명]			본각	김영신	팀장 18 
+				\item [전번]			5311 - 7744	
+				\item [제적사찰]		범어사
+				\item [차종]			
+				\item [차량]			
+				\item [담당주]		3
+				\item [담당 대대]	5,6
+				\item [사진]			\includegraphics[scale=1.0,  width=0.4\textwidth]{./fig/20201126145836.png}
+				\item [비고]			
+				\item [주소] 
+			\end{itemize}
+
+			\end{block}						
+		\end{frame}					
+
+	%	---------------------------------------------------------- 여은심	윤점분 18	}
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 여은심	윤점분 18	}
+		\begin{frame} [t,plain]
+		\frametitle{ 여은심	윤점분 18	}
+			\begin{block} {여은심	윤점분 18	}
+			\setlength{\leftmargini}{6em}			
+			\begin{itemize}
+				\item [법명]			여은심	윤점분 18	
+				\item [전번]			9327 - 4171
+				\item [제적사찰]		
+				\item [차종]			
+				\item [차량]			
+				\item [담당주]		1
+				\item [담당 대대]	3
+				\item [사진]			\includegraphics[scale=1.0,  width=0.4\textwidth]{./fig/8fjUd015bnb0xxjg3ue3_r4ka0l.jpg}
+				\item [비고]			
+				\item [주소] 
+			\end{itemize}
+
+			\end{block}						
+		\end{frame}					
+
+
+	%	---------------------------------------------------------- 향청	권미애 19	}
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 향청	권미애 19	}
+		\begin{frame} [t,plain]
+		\frametitle{ 향청	권미애 19	}
+			\begin{block} {향청	권미애 19	}
+			\setlength{\leftmargini}{6em}			
+			\begin{itemize}
+				\item [법명]			향청	권미애 19	
+				\item [전번]			7722 - 2409
+				\item [제적사찰]		
+				\item [차종]			
+				\item [차량]			
+				\item [담당주]		1
+				\item [담당 대대]	5,6
+				\item [사진]			\includegraphics[scale=1.0,  width=0.4\textwidth]{./fig/4_e2bUd018svc56l9wbtynz5f_y8a021.jpg}
+				\item [비고]			
+				\item [주소] 
+			\end{itemize}
+
+			\end{block}						
+		\end{frame}					
+
+	%	---------------------------------------------------------- 해공자	안애영 19	}
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 해공자	안애영 19	}
+		\begin{frame} [t,plain]
+		\frametitle{ 해공자	안애영 19	}
+			\begin{block} {해공자	안애영 19	}
+			\setlength{\leftmargini}{6em}			
+			\begin{itemize}
+				\item [법명]			해공자	안애영 19	
+				\item [전번]			7314 - 0062
+				\item [제적사찰]		
+				\item [차종]			소나타
+				\item [차량]			39수 5389
+				\item [담당주]		2
+				\item [담당 대대]	3
+				\item [사진]			\includegraphics[scale=1.0,  width=0.4\textwidth]{./fig/9_j4dUd018svcsp7h6vb7azfo_twvfq8.jpg}
+				\item [비고]			
+				\item [주소] 
+			\end{itemize}
+
+			\end{block}						
+		\end{frame}					
+
+
+
+	%	---------------------------------------------------------- 환희행	김은희 20	}
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 환희행	김은희 20	}
+		\begin{frame} [t,plain]
+		\frametitle{ 환희행	김은희 20	}
+			\begin{block} {환희행	김은희 20	}
+			\setlength{\leftmargini}{6em}			
+			\begin{itemize}
+				\item [법명]			환희행	김은희 20	
+				\item [전번]			3565 - 5711
+				\item [제적사찰]		
+				\item [차종]			BMW
+				\item [차량]			20무 8415
+				\item [담당주]		2
+				\item [담당 대대]	5,6
+				\item [사진]			%\includegraphics[scale=1.0,  width=0.4\textwidth]{./fig/9_j4dUd018svcsp7h6vb7azfo_twvfq8.jpg}
+				\item [비고]			
+				\item [주소] 
+			\end{itemize}
+
+			\end{block}						
+		\end{frame}					
+
+
+	%	---------------------------------------------------------- 여여심	양순자 20	}
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 여여심	양순자 20	}
+		\begin{frame} [t,plain]
+		\frametitle{여여심	양순자 20	}
+			\begin{block} {여여심	양순자 20	}
+			\setlength{\leftmargini}{6em}			
+			\begin{itemize}
+				\item [법명]			여여심	양순자 20	
+				\item [전번]			4754 - 1825
+				\item [제적사찰]		
+				\item [차종]			
+				\item [차량]			
+				\item [담당주]		2
+				\item [담당 대대]	5,6
+				\item [사진]			\includegraphics[scale=1.0,  width=0.4\textwidth]{./fig/g_4i2Ud018svc1dprr0q3drfti_dsoq4f.jpg}
+				\item [비고]			
+				\item [주소] 
+			\end{itemize}
+
+			\end{block}						
+		\end{frame}					
+
+
+	%	---------------------------------------------------------- 법운화	윤경숙 21	}
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 법운화	윤경숙 21	}
+		\begin{frame} [t,plain]
+		\frametitle{ 법운화	윤경숙 21	}
+			\begin{block} {법운화	윤경숙 21	}
+			\setlength{\leftmargini}{6em}			
+			\begin{itemize}
+				\item [법명]			법운화	윤경숙 21	
+				\item [전번]			9577- 9666
+				\item [제적사찰]		
+				\item [차종]			그랜저
+				\item [차량]			06저 5557
+				\item [담당주]		2
+				\item [담당 대대]	3
+				\item [사진]			%\includegraphics[scale=1.0,  width=0.4\textwidth]{./fig/g_4i2Ud018svc1dprr0q3drfti_dsoq4f.jpg}
+				\item [비고]			
+				\item [주소] 
+			\end{itemize}
+
+			\end{block}						
+		\end{frame}					
+
+
+
+	%	---------------------------------------------------------- 보운	천유실 21	}
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 보운	천유실 21	}
+		\begin{frame} [t,plain]
+		\frametitle{ 보운	천유실 21	}
+			\begin{block} {보운	천유실 21}	
+			\setlength{\leftmargini}{6em}			
+			\begin{itemize}
+				\item [법명]			보운	천유실 21	
+				\item [전번]			8949 - 3468
+				\item [제적사찰]		
+				\item [차종]			
+				\item [차량]			
+				\item [담당주]		1
+				\item [담당 대대]	2,7
+				\item [사진]			\includegraphics[scale=1.0,  width=0.4\textwidth]{./fig/20201126144838.png}
+				\item [비고]			
+				\item [주소] 
+			\end{itemize}
+
+			\end{block}						
+		\end{frame}					
+
+
+
+	%	---------------------------------------------------------- 덕행심 강영옥 22}
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 덕행심 강영옥 22}
+		\begin{frame} [t,plain]
+		\frametitle{ 덕행심 강영옥 22}
+			\begin{block} {덕행심 강영옥 22}
+			\setlength{\leftmargini}{6em}			
+			\begin{itemize}
+				\item [법명]			덕행심 강영옥 22
+				\item [전번]			4966 - 5978
+				\item [제적사찰]		
+				\item [차종]			소나타
+				\item [차량]			15도 8910
+				\item [담당주]		1
+				\item [담당 대대]	2,7
+				\item [사진]			\includegraphics[scale=1.0,  width=0.4\textwidth]{./fig/20201126151118.png}
+				\item [비고]			
+				\item [주소] 
+			\end{itemize}
+
+			\end{block}						
+		\end{frame}					
+
+
+	%	---------------------------------------------------------- 보광	이희규 22	}
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 보광	이희규 22	}
+		\begin{frame} [t,plain]
+		\frametitle{ 보광	이희규 22	}
+			\begin{block} {보광	이희규 22	}
+			\setlength{\leftmargini}{6em}			
+			\begin{itemize}
+				\item [법명]			보광	이희규 22	
+				\item [전번]			7501 - 0505
+				\item [제적사찰]		범어사
+				\item [차종]			그랜저
+				\item [차량]			258부 5105
+				\item [담당주]		4
+				\item [담당 대대]	3
+				\item [사진]			\includegraphics[scale=1.0,  width=0.4\textwidth]{./fig/20201126154253.png}
+				\item [비고]			
+				\item [주소] 
+			\end{itemize}
+
+			\end{block}						
+		\end{frame}					
+
+
+	%	---------------------------------------------------------- 보원	김형덕 23	}
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 보원	김형덕 23	}
+		\begin{frame} [t,plain]
+		\frametitle{ 보원	김형덕 23	}
+			\begin{block} {보원	김형덕 23	}
+			\setlength{\leftmargini}{6em}			
+			\begin{itemize}
+				\item [법명]			보원	김형덕 23
+				\item [전번]			3844 - 3811
+				\item [제적사찰]		
+				\item [차종]			울란도
+				\item [차량]			59버 0944
+				\item [담당주]		4
+				\item [담당 대대]	2,7
+				\item [사진]			\includegraphics[scale=1.0,  width=0.4\textwidth]{./fig/2egUd009k5dv8645o6n6_7jzbs4.jpg}
+				\item [비고]			
+				\item [주소] 
+			\end{itemize}
+
+			\end{block}						
+		\end{frame}					
+
+
+
+
+	%	---------------------------------------------------------- 고불행	박영애 23 }
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 고불행	박영애 23 }
+		\begin{frame} [t,plain]
+		\frametitle{ 고불행	박영애 23 }
+			\begin{block} {고불행	박영애 23 }
+			\setlength{\leftmargini}{6em}			
+			\begin{itemize}
+				\item [법명]			고불행	박영애 23 
+				\item [전번]			9320 - 3811
+				\item [제적사찰]		
+				\item [차종]			
+				\item [차량]			
+				\item [담당주]		4
+				\item [담당 대대]	2,7
+				\item [사진]			\includegraphics[scale=1.0,  width=0.4\textwidth]{./fig/20201126150609.png}
+				\item [비고]			
+				\item [주소] 
+			\end{itemize}
+
+			\end{block}						
+		\end{frame}					
+
+
+
+	%	---------------------------------------------------------- 공성	박영창 24	 막내 }
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 공성	박영창 24	  }
+		\begin{frame} [t,plain]
+		\frametitle{ 공성	박영창 24	  }
+			\begin{block} {공성	박영창 24	  }
+			\setlength{\leftmargini}{6em}			
+			\begin{itemize}
+				\item [법명]			공성	박영창 24	 막내 
+				\item [전번]			5267 - 3622
+				\item [제적사찰]		
+				\item [차종]			소나타
+				\item [차량]			10루 6239
+				\item [담당주]		2
+				\item [담당 대대]	3
+				\item [사진]			\includegraphics[scale=1.0,  width=0.4\textwidth]{./fig/b_jbjUd018svcu919py5mfi4_cy16jk.jpg}
+				\item [비고]			
+				\item [주소] 
+			\end{itemize}
+
+			\end{block}						
+		\end{frame}					
+
+	%	---------------------------------------------------------- 보조 김대희 25 }
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 보조 김대희 25 }
+		\begin{frame} [t,plain]
+		\frametitle{ 보조 김대희 25 }
+			\begin{block} {보조 김대희 25 }
+			\setlength{\leftmargini}{6em}			
+			\begin{itemize}
+				\item [법명]			보조 김대희 25 
+				\item [전번]			3839 - 5609
+				\item [제적사찰]		범어사
+				\item [차종]			카니발
+				\item [차량]			09나 9174
+				\item [담당주]		
+				\item [담당 대대]	
+				\item [사진]			\includegraphics[scale=1.0,  width=0.4\textwidth]{./fig/202011262323.jpg}
+				\item [비고]			
+				\item [주소] 
+
+			\end{itemize}
+
+			\end{block}						
+		\end{frame}					
+
+							
+
+	%	---------------------------------------------------------- 금련화 김명자 25 }
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 금련화 김명자 25 }
+		\begin{frame} [t,plain]
+		\frametitle{ 금련화 김명자 25 }
+			\begin{block} {금련화 김명자 25 }
+			\setlength{\leftmargini}{6em}			
+			\begin{itemize}
+				\item [법명]			금련화 김명자 25 
+				\item [전번]			4907 - 9823
+				\item [제적사찰]		
+				\item [차종]			SM5
+				\item [차량]			12로 7163
+				\item [담당주]		
+				\item [담당 대대]	
+				\item [사진]			\includegraphics[scale=1.0,  width=0.4\textwidth]{./fig/20201126155319.png}
+				\item [비고]			
+				\item [주소] 
+			\end{itemize}
+
+			\end{block}						
+		\end{frame}					
+
+
+
+	%	========================================================== 담당 대대
+		\part{ 담당 대대}
+		\frame{\partpage}
+
+		\begin{frame} [plain]{목차}
+		\tableofcontents%
+
+\label{part2} 	%  면과장
+
+		\end{frame}
+		
+
+	%	---------------------------------------------------------- 호국 백양사
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 호국 백양사 }
+		\begin{frame} [t,plain]
+		\frametitle{ 호국 백양사 }
+			\begin{block} { 호국 백양사 }
+			\setlength{\leftmargini}{4em}			
+			\begin{itemize}
+				\item [지역] 서면
+				\item [명칭] 카이시소소
+				\item [주소] 
+				\item [평가] 
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+
+
+	%	---------------------------------------------------------- 호국 혜옹사
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 호국 혜옹사 }
+		\begin{frame} [t,plain]
+		\frametitle{ 호국 혜옹사 }
+			\begin{block} {호국 혜옹사}
+			\setlength{\leftmargini}{4em}			
+			\begin{itemize}
+				\item [지역] 수영 
+				\item [명칭] 수영 회국수
+				\item [주소] 수영구 수영로680번길56
+				\item [전화] 051) 752 - 5788
+				\item [시간] 11시 30 - 21시 00 (9시)
+				\item [휴무] 
+				\item [평가] 
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+
+
+	%	---------------------------------------------------------- 호국 관음사
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 호국 관음사 }
+		\begin{frame} [t,plain]
+		\frametitle{ 호국 관음사 }
+			\begin{block} { 호국 관음사 }
+			\setlength{\leftmargini}{4em}			
+			\begin{itemize}
+				\item [지역] 초량동
+				\item [명칭] 금수각
+				\item [주소] 초량로119
+				\item [전화] 051) 442 - 2340
+				\item [시간] 10시 30 - 20시 00 (8시)
+				\item [휴무] 매주 일요일
+				\item [평가] 
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+
+
+	%	----------------------------------------------------------모라동 대대
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 모라동 대대 }
+		\begin{frame} [t,plain]
+		\frametitle{ 모라동 대대 }
+			\begin{block} { 모라동 대대 }
+			\setlength{\leftmargini}{4em}			
+			\begin{itemize}
+				\item [지역] 당감동
+				\item [명칭] 복돌네통닭
+				\item [주소] 당감로16번길 42
+				\item [전화] 051)897-6579
+				\item [평가] 
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+
+
+
+	%	========================================================== 청파팀 행사
+		\part{ 청파팀 행사}
+		\frame{\partpage}
+
+		\begin{frame} [plain]{목차}
+		\tableofcontents%
+
+\label{part3} 	%  면과장
+
+		\end{frame}
+		
+
+
+	%	---------------------------------------------------------- 2020년 11월 7일
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 2020년 11월 7일 토 }
+
+		\begin{frame} [t,plain]
+		\frametitle{ 2020년 11월 7일 토 }
+			\begin{block} { 2020년 11월 7일 토 }
+			\setlength{\leftmargini}{4em}			
+			\begin{itemize}
+				\item [지역] 용호동	
+				\item [명칭] 양푼이국수	
+				\item [주소] 남구 용호로34 일신프리빌리지
+			\end{itemize}
+				\includegraphics[scale=1.0,  width=0.7\textwidth]{./fig/h_jh9Ud018svc1ic0ihb0q21d3_pxkr6f.jpg}
+			\end{block}						
+		\end{frame}						
+
+		\begin{frame} [t,plain]
+		\frametitle{ 2020년 11월 7일 토 }
+			\begin{block} { 2020년 11월 7일 토 }
+			\setlength{\leftmargini}{4em}			
+				\includegraphics[scale=1.0,  width=1.0\textwidth]{./fig/c_a04Ud018svcnhm34v4g5urz_pxkr6f.jpg}
+			\end{block}		
+
+			\begin{block} { 2020년 11월 7일 토 }
+				\includegraphics[scale=1.0,  width=0.5\textwidth]{./fig/h_jh9Ud018svc1ic0ihb0q21d3_pxkr6f.jpg}
+			\end{block}						
+				
+		\end{frame}						
+
+
+
+
+% ------------------------------------------------------------------------------
+% End document
+% ------------------------------------------------------------------------------
+
+
+
+
+
+\end{document}
+
+
